@@ -1,4 +1,4 @@
-export declare type EasingFunction = (k: number) => number;
+export type EasingFunction = (k: number) => number;
 export declare function linear(k: number): number;
 export declare function quadraticIn(k: number): number;
 export declare function quadraticOut(k: number): number;
