@@ -1,7 +1,7 @@
 import {
   TextureLoader,
   MeshBasicMaterial,
-  PlaneBufferGeometry,
+  PlaneGeometry,
   Mesh,
   DoubleSide,
   AnimationMixer,
@@ -76,7 +76,7 @@ const nonBatchedColor = new Color().setRGB(Math.random() * 10, Math.random() * 1
 const nonBatchedMatrials: MeshBasicMaterial[] = [];
 
 function addImage(texture: Texture) {
-  const imageGeometry = new PlaneBufferGeometry();
+  const imageGeometry = new PlaneGeometry();
   const imageMaterial = new MeshBasicMaterial({ map: texture });
   imageMaterial.side = DoubleSide;
   const imageMesh = new Mesh(imageGeometry, imageMaterial);

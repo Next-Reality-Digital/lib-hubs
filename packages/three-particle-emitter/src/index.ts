@@ -1,7 +1,7 @@
 import {
   Mesh,
   InstancedBufferGeometry,
-  PlaneBufferGeometry,
+  PlaneGeometry,
   ShaderMaterial,
   Vector3,
   Color,
@@ -34,7 +34,7 @@ export function clamp(min: number, max: number, value: number) {
   return value;
 }
 
-function flipV(geometry: PlaneBufferGeometry) {
+function flipV(geometry: PlaneGeometry) {
   // Three.js seems to assume texture flipY is true for all its built in geometry
   // but we turn this off on our texture loader since createImageBitmap in Firefox
   // does not support flipping. Then we flip the v of uv for flipY = false texture.
@@ -134,7 +134,7 @@ export class ParticleEmitter extends Mesh {
   inverseWorldScale: Vector3;
 
   constructor(texture: Texture) {
-    const planeGeometry = new PlaneBufferGeometry(1, 1, 1, 1);
+    const planeGeometry = new PlaneGeometry(1, 1, 1, 1);
     if (texture && !texture.flipY) {
       flipV(planeGeometry);
     }
@@ -194,7 +194,7 @@ export class ParticleEmitter extends Mesh {
 
   updateParticles() {
     const texture = (this.material as ShaderMaterial).uniforms.map.value;
-    const planeGeometry = new PlaneBufferGeometry(1, 1, 1, 1);
+    const planeGeometry = new PlaneGeometry(1, 1, 1, 1);
     if (texture && !texture.flipY) {
       flipV(planeGeometry);
     }

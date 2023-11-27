@@ -1,7 +1,7 @@
 {
   "name": "@mozillareality/three-particle-emitter",
   "license": "MPL-2.0",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "",
   "repository": {
     "type": "git",
@@ -24,8 +24,8 @@
   },
   "devDependencies": {
     "@types/webgl2": "0.0.6",
-    "@types/three": "0.141.0",
-    "three": "github:mozillareality/three.js#hubs-patches-141"
+    "@types/three": "0.158.0",
+    "three": "github:NicoToast/three.js#hubs-patches-158"
   },
   "publishConfig": {
     "access": "public"
