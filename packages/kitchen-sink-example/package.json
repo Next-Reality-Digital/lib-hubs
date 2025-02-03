@@ -6,9 +6,12 @@
   "scripts": {
     "start": "webpack-dev-server"
   },
+  "peerDependencies": {
+    "three": "*"
+  },
   "dependencies": {
     "@mozillareality/three-particle-emitter": "^0.2.3",
-    "three": "github:NicoToast/three.js#hubs-patches-158"
+    "three": "github:Next-Reality-Digital/three.js#v158"
   },
   "devDependencies": {
     "@types/webgl2": "0.0.6",

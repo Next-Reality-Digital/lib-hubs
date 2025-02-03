@@ -25,7 +25,7 @@
   "devDependencies": {
     "@types/webgl2": "0.0.6",
     "@types/three": "0.158.0",
-    "three": "github:NicoToast/three.js#hubs-patches-158"
+    "three": "github:Next-Reality-Digital/three.js#v158"
   },
   "publishConfig": {
     "access": "public"
